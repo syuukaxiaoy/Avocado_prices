@@ -180,7 +180,7 @@ byregion.describe()
 byregiona = byregion.sort_values(by='AveragePrice', ascending=False)
 plt.figure(figsize=(16,10))
 plt.title('Region vs Averageprice')
-ax = sns.barplot(x='region', y='AveragePrice',data=byregiona)
+ax = sns.barplot(x='region', y='AveragePrice',data=byregiona,color="darkcyan")
 ax.set_xticklabels(ax.get_xticklabels(), rotation=-90);
 
 
@@ -196,7 +196,7 @@ byregions = byregions.reset_index().drop(['index'],axis=1)
 byregions = byregions.drop([0])
 plt.figure(figsize=(16,10))
 plt.title('Region vs Total Volume')
-ax = sns.barplot(x='region', y='Total Volume',data=byregions)
+ax = sns.barplot(x='region', y='Total Volume',data=byregions,color="seagreen")
 ax.set_xticklabels(ax.get_xticklabels(), rotation=-90);
 
 
@@ -244,7 +244,7 @@ avomo.head()
 
 plt.figure(figsize=(12,8))
 plt.title('Averageprice trend of each year')
-ax = sns.lineplot(x='month', y='AveragePrice', hue='year',markers=True, data=avo);
+ax = sns.lineplot(x='month', y='AveragePrice', hue='year',markers=True, data=avo,palette="Set2");
 
 
 # Surely organic avocados are good? I'm sorry I haven't felt the difference yet, but how many organic avocados are good for you? I'm just like most people who are more attuned to taste, which is when the avocado is ripe, when it's at its best, or when it's committed to making something delicious. Maybe I'll just be a foodie. Do you like avocados as much as I do? Look forward to sharing more avocado recipes with me~
